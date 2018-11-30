@@ -36,220 +36,42 @@ mod tests {
         input
     }
 
-    #[test]
-    fn solve_day1() {
-        use day01::{star_one, star_two};
+    macro_rules! test_solve {
+        ($day:ident, $one:expr, $two:expr) => {
+            #[test]
+            fn $day() {
+                use $day::{star_one, star_two};
 
-        let input = load_file("day1.txt");
+                let input = load_file(&format!("{}.txt", stringify!($day)));
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+                assert_eq!(star_one(&input), $one);
+                assert_eq!(star_two(&input), $two);
+            }
+        }
     }
-    #[test]
-    fn solve_day2() {
-        use day02::{star_one, star_two};
 
-        let input = load_file("day2.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day3() {
-        use day03::{star_one, star_two};
-
-        let input = load_file("day3.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day4() {
-        use day04::{star_one, star_two};
-
-        let input = load_file("day4.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day5() {
-        use day05::{star_one, star_two};
-
-        let input = load_file("day5.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day6() {
-        use day06::{star_one, star_two};
-
-        let input = load_file("day6.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day7() {
-        use day07::{star_one, star_two};
-
-        let input = load_file("day7.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day8() {
-        use day08::{star_one, star_two};
-
-        let input = load_file("day8.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day9() {
-        use day09::{star_one, star_two};
-
-        let input = load_file("day9.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day10() {
-        use day10::{star_one, star_two};
-
-        let input = load_file("day10.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day11() {
-        use day11::{star_one, star_two};
-
-        let input = load_file("day11.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day12() {
-        use day12::{star_one, star_two};
-
-        let input = load_file("day12.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day13() {
-        use day13::{star_one, star_two};
-
-        let input = load_file("day13.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day14() {
-        use day14::{star_one, star_two};
-
-        let input = load_file("day14.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day15() {
-        use day15::{star_one, star_two};
-
-        let input = load_file("day15.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day16() {
-        use day16::{star_one, star_two};
-
-        let input = load_file("day16.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day17() {
-        use day17::{star_one, star_two};
-
-        let input = load_file("day17.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day18() {
-        use day18::{star_one, star_two};
-
-        let input = load_file("day18.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day19() {
-        use day19::{star_one, star_two};
-
-        let input = load_file("day19.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day20() {
-        use day20::{star_one, star_two};
-
-        let input = load_file("day20.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day21() {
-        use day21::{star_one, star_two};
-
-        let input = load_file("day21.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day22() {
-        use day22::{star_one, star_two};
-
-        let input = load_file("day22.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day23() {
-        use day23::{star_one, star_two};
-
-        let input = load_file("day23.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
-    #[test]
-    fn solve_day24() {
-        use day24::{star_one, star_two};
-
-        let input = load_file("day24.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
-    }
+    test_solve!(day01, 1, 1);
+    test_solve!(day02, 1, 1);
+    test_solve!(day03, 1, 1);
+    test_solve!(day04, 1, 1);
+    test_solve!(day05, 1, 1);
+    test_solve!(day06, 1, 1);
+    test_solve!(day07, 1, 1);
+    test_solve!(day08, 1, 1);
+    test_solve!(day09, 1, 1);
+    test_solve!(day10, 1, 1);
+    test_solve!(day11, 1, 1);
+    test_solve!(day12, 1, 1);
+    test_solve!(day13, 1, 1);
+    test_solve!(day14, 1, 1);
+    test_solve!(day15, 1, 1);
+    test_solve!(day16, 1, 1);
+    test_solve!(day17, 1, 1);
+    test_solve!(day18, 1, 1);
+    test_solve!(day19, 1, 1);
+    test_solve!(day20, 1, 1);
+    test_solve!(day21, 1, 1);
+    test_solve!(day22, 1, 1);
+    test_solve!(day23, 1, 1);
+    test_solve!(day24, 1, 1);
 }
