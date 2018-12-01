@@ -23,6 +23,10 @@ mod day22;
 mod day23;
 mod day24;
 
+pub fn day01() {
+    day01::star_one("");
+}
+
 #[cfg(test)]
 mod tests {
     use std::fs::File;
